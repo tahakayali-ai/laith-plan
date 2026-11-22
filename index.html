@@ -178,7 +178,10 @@ h1{font-family:var(--font-display);font-weight:700;font-size:2.1rem;line-height:
 .motion:not(.sr) .step.is-current .node::after,.motion.sr .step.is-current.in .node::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--accent);opacity:0;pointer-events:none;animation:pulse 1.6s var(--ease) 1.2s 4}
 .motion:not(.sr) .step.is-current .node::after{animation-delay:2.6s}
 @keyframes pulse{from{opacity:.7;transform:scale(1)}to{opacity:0;transform:scale(1.9)}}
-@media (prefers-reduced-motion:reduce){.opening{display:none}.motion *{animation:none!important}}
+/* Reduced motion: keep the intro and the scroll writing, but as gentle fades only (no movement). */
+@keyframes fade-in{from{opacity:0}}
+@keyframes fade-out{to{opacity:0;visibility:hidden}}
+@media (prefers-reduced-motion:reduce){.opening{animation-name:fade-out}.in-name,.in-k,.in-icons .ic{animation-name:fade-in}.motion .step .node::after{animation:none!important}.sr .step:not(.in) .card,.sr .step:not(.in) .node,.sr .step:not(.in) .tw,.sr .step:not(.in) .gw,.sr .step:not(.in) .tm,.sr .step:not(.in) .card[open] > .facts{transform:none}}
 .expand-all .opening{display:none}
 </style>
 </head>
@@ -402,7 +405,7 @@ h1{font-family:var(--font-display);font-weight:700;font-size:2.1rem;line-height:
   var plan=document.querySelector('.plan');
   var steps=[].slice.call(document.querySelectorAll('.step'));
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var still=reduce||plan.classList.contains('expand-all');
+  var still=plan.classList.contains('expand-all');
   /* To move the plan forward, change data-current on <main class="plan">. */
   var cur=parseInt(plan.getAttribute('data-current'),10)||1;
   steps.forEach(function(li){
