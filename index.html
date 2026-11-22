@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>خطة عمل ليث</title>
+<meta name="description" content="خطة عمل ليث: 10 خطوات من الصفر لأول عملاء بربح.">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Readex+Pro:wght@500;600;700&display=swap">
+<style>
+/* Layout: one narrow reading column; a vertical rail on the start (right) edge carries 9 numbered stations, broken into 4 phase chapters. Goal line is the largest text in each station. */
+:root{
+  --bg:#F4F6F4;
+  --surface:#FFFFFF;
+  --ink:#13201C;
+  --muted:#596660;
+  --line:#D9E0DC;
+  --accent:#0B5A4C;
+  --accent-soft:#E2EEEA;
+  --on-accent:#FFFFFF;
+  --font-display:"Readex Pro","IBM Plex Sans Arabic","Segoe UI","Noto Sans Arabic",Tahoma,sans-serif;
+  --font-body:"IBM Plex Sans Arabic","Segoe UI","Noto Sans Arabic",Tahoma,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1412; --surface:#151D1A; --ink:#E6EDEA; --muted:#98A6A0; --line:#25312D;
+    --accent:#5CC0A9; --accent-soft:#18302A; --on-accent:#0B1A16; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1412; --surface:#151D1A; --ink:#E6EDEA; --muted:#98A6A0; --line:#25312D;
+  --accent:#5CC0A9; --accent-soft:#18302A; --on-accent:#0B1A16; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.75;-webkit-text-size-adjust:100%}
+.plan{
+  max-width:600px;margin-inline:auto;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+  padding-block:40px 56px;
+}
+h1,h2,h3,p,ol,dl,dd{margin:0;padding:0}
+ol{list-style:none}
+
+/* Header */
+.head{display:flex;flex-direction:column;gap:6px;padding-bottom:28px}
+.brandline{width:40px;height:4px;border-radius:2px;background:var(--accent);margin-bottom:14px}
+h1{font-family:var(--font-display);font-weight:700;font-size:2.1rem;line-height:1.25;letter-spacing:0;text-wrap:balance}
+.sub{font-family:var(--font-display);font-weight:500;font-size:1.15rem;line-height:1.5;color:var(--accent);text-wrap:balance}
+.intro{display:flex;flex-direction:column;gap:4px;padding-block:22px 4px;border-top:1px solid var(--line);margin-top:22px;color:var(--ink)}
+.intro .hi{font-weight:600}
+.intro p{max-width:34em}
+
+/* Progress */
+.progress{display:flex;flex-direction:column;gap:10px;margin-top:28px;padding:14px 16px;border-radius:12px;background:var(--surface);border:1px solid var(--line)}
+.pg-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.pg-k{font-size:.72rem;font-weight:600;padding:2px 10px;border-radius:999px;background:var(--accent);color:var(--on-accent)}
+.pg-v{font-family:var(--font-display);font-weight:500;font-size:.95rem;font-variant-numeric:tabular-nums}
+.pg-v b{font-weight:700;color:var(--accent)}
+.pg-bar{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:4px}
+.seg{display:block;height:8px;border-radius:4px;background:var(--line);position:relative}
+.seg::after{content:"";position:absolute;inset:-12px 0}
+.seg.is-done{background:var(--accent);opacity:.45}
+.seg.is-current{background:var(--accent)}
+.seg:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* Hint + phase map */
+.hint{display:flex;align-items:center;gap:8px;margin-top:22px;font-size:.9rem;font-weight:500;color:var(--accent)}
+.hint svg{width:18px;height:18px;flex:none}
+.map{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-top:10px}
+.ph{display:flex;flex-direction:column;gap:10px;padding:12px 10px;border-radius:10px;background:var(--surface);border:1px solid var(--line);min-width:0}
+.map a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
+.map a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+.map .pn{font-family:var(--font-display);font-weight:600;font-size:.88rem;line-height:1.35;text-wrap:balance}
+.map .dots{display:flex;gap:6px;flex-wrap:wrap}
+.map .d{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-size:.82rem;font-weight:600;font-variant-numeric:tabular-nums;border:1.5px solid var(--accent);color:var(--accent);line-height:1}
+.map a.d:focus-visible{border-radius:50%}
+.map .d.you{background:var(--accent);color:var(--on-accent)}
+.legend{display:flex;align-items:center;gap:8px;margin-block:10px 44px;font-size:.85rem;color:var(--muted)}
+.legend .d{width:14px;height:14px;border-radius:50%;background:var(--accent);flex:none}
+@media (max-width:519px){.map{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Phases */
+.phase{display:flex;flex-direction:column;gap:0}
+.phase + .phase{margin-top:12px}
+.phase-head{display:flex;align-items:baseline;gap:10px;padding-block:8px 22px;scroll-margin-top:16px}
+.phase-head .k{font-size:.82rem;font-weight:500;color:var(--muted);letter-spacing:.01em;white-space:nowrap}
+.phase-head h2{font-family:var(--font-display);font-weight:700;font-size:1.5rem;line-height:1.3;color:var(--accent)}
+
+/* Rail + stations */
+.steps{position:relative;display:flex;flex-direction:column;gap:16px;padding-bottom:30px}
+.steps::before{content:"";position:absolute;inset-block:8px 30px;inset-inline-start:17px;width:2px;background:var(--line);border-radius:1px}
+.step{position:relative;display:grid;grid-template-columns:36px minmax(0,1fr);column-gap:16px}
+.node{position:relative;z-index:1;width:36px;height:36px;border-radius:50%;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font-family:var(--font-display);font-weight:600;font-size:1rem;font-variant-numeric:tabular-nums;box-shadow:0 0 0 5px var(--bg);margin-top:10px}
+.step{scroll-margin-top:16px}
+.card{min-width:0;background:var(--surface);border:1px solid var(--line);border-radius:14px}
+.card summary{list-style:none;cursor:pointer;display:flex;flex-direction:column;gap:6px;padding:14px 16px 16px;border-radius:14px;-webkit-tap-highlight-color:transparent}
+.card summary::-webkit-details-marker{display:none}
+.card summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.sumtop{display:flex;align-items:center;gap:8px;min-width:0}
+.sumtop .title{flex:1;min-width:0}
+.here{display:none;flex:none;font-size:.72rem;font-weight:600;padding:2px 10px;border-radius:999px;background:var(--accent);color:var(--on-accent);white-space:nowrap}
+.chev{flex:none;width:18px;height:18px;color:var(--muted);transition:transform .2s ease}
+.card[open] .chev{transform:rotate(180deg)}
+.card > .facts{margin:0 16px 14px}
+.step.is-current .card{border:2px solid var(--accent)}
+.step.is-current .here{display:inline-flex}
+.step.is-current .node{box-shadow:0 0 0 5px var(--bg),0 0 0 7px var(--accent)}
+.step.is-current .node .you{inset-block-start:-7px;inset-inline-end:-7px}
+.card .goal{font-size:1.32rem}
+.step.is-done .node{background:var(--accent-soft);color:var(--accent)}
+.btn{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;margin-top:8px;min-height:44px;padding:10px 18px;border-radius:999px;background:var(--accent);color:var(--on-accent);font-family:var(--font-display);font-weight:600;font-size:.95rem;text-decoration:none}
+.btn svg{width:16px;height:16px}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.chev{transition:none}}
+.title{font-family:var(--font-display);font-weight:500;font-size:.98rem;line-height:1.5;color:var(--muted);text-wrap:balance}
+.goal{font-family:var(--font-display);font-weight:700;font-size:1.42rem;line-height:1.5;color:var(--ink);text-wrap:pretty}
+.goal .gk{font-weight:600;font-size:.95rem;color:var(--accent);margin-inline-end:4px;vertical-align:.12em}
+.facts{display:flex;flex-direction:column;gap:2px;margin-top:12px;border-top:1px solid var(--line)}
+.fact{display:flex;flex-direction:column;gap:1px;padding-block:10px;border-bottom:1px solid var(--line)}
+.fact dt{font-size:.8rem;font-weight:600;color:var(--muted);letter-spacing:.01em}
+.fact dd{font-size:.97rem;line-height:1.75}
+.fact.ask{background:var(--accent-soft);border-radius:10px;padding:10px 12px;border-bottom-color:transparent;margin-block:6px}
+.fact.ask dt{color:var(--accent);display:flex;align-items:center;gap:6px}
+.fact.ask dt svg{flex:none;width:16px;height:16px}
+.fact.get dd{font-weight:500}
+.node .you{position:absolute;inset-block-start:-3px;inset-inline-end:-3px;width:14px;height:14px;border-radius:50%;background:var(--surface);border:2px solid var(--accent)}
+
+/* Close */
+.close{margin-top:22px;padding:24px 20px;border-radius:14px;background:var(--accent);color:var(--on-accent);display:flex;flex-direction:column;gap:8px}
+.close p{font-family:var(--font-display);font-weight:500;font-size:1.12rem;line-height:1.7}
+
+@media (max-width:380px){
+  h1{font-size:1.85rem}
+  .goal{font-size:1.3rem}
+  .map .pn{font-size:.8rem}
+}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+/* Team chips */
+.team{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.tm{display:inline-flex;align-items:center;gap:6px;padding-block:3px;padding-inline:3px 10px;border-radius:999px;background:var(--bg);border:1px solid var(--line);font-size:.74rem;font-weight:500;line-height:1.4;color:var(--muted)}
+.tm svg{flex:none;width:22px;height:22px;padding:4px;border-radius:50%;background:var(--accent-soft);color:var(--accent)}
+
+/* Motion: one style, expo ease-out, no overshoot. Every "from" state lives under classes JS adds, so the page is complete at rest without them. */
+:root{--ease:cubic-bezier(.16,1,.3,1);--intro-bg:#0B1512;--intro-ink:#E6EDEA;--intro-muted:#8FA39C;--intro-accent:#5CC0A9}
+.opening{position:fixed;inset:0;z-index:50;display:grid;place-items:center;background:var(--intro-bg);color:var(--intro-ink);pointer-events:none;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));animation:intro-out .6s var(--ease) 1.9s forwards}
+.in-inner{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+.in-name{margin:0;font-family:var(--font-display);font-weight:700;font-size:3.4rem;line-height:1.15;animation:rise .7s var(--ease) both}
+.in-k{margin:0;font-family:var(--font-display);font-weight:500;font-size:1.05rem;color:var(--intro-accent);animation:rise .7s var(--ease) .12s both}
+.in-icons{display:grid;grid-template-columns:repeat(6,30px);gap:10px;margin-top:26px}
+.in-icons .ic{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;border:1px solid #24413A;color:var(--intro-accent);animation:gather .8s var(--ease) both;animation-delay:calc(.15s + var(--d) * 45ms)}
+.in-icons svg{width:16px;height:16px}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}}
+@keyframes gather{from{opacity:0;transform:translate(var(--x),var(--y)) rotate(var(--r)) scale(.4)}}
+@keyframes intro-out{to{opacity:0;transform:translateY(-4%);visibility:hidden}}
+/* Scroll writing: "the line writes the plan". Hidden states exist only under .sr, which JS adds. */
+.sr .tw,.sr .gw{display:inline-block}
+.sr .step:not(:last-child)::after{content:"";position:absolute;inset-inline-start:17px;width:2px;top:28px;bottom:-26px;background:var(--accent);border-radius:1px;transform-origin:top;transform:scaleY(0)}
+.sr .step.fill::after{transform:none;transition:transform .4s var(--ease)}
+.sr .step:not(.in) .card{opacity:0;transform:translateY(10px)}
+.sr .step:not(.in) .node{background:var(--line);color:var(--muted);transform:scale(.8)}
+.sr .step:not(.in) .tw,.sr .step:not(.in) .gw{opacity:0;transform:translateX(10px)}
+.sr .step:not(.in) .here,.sr .step:not(.in) .chev{opacity:0}
+.sr .step:not(.in) .tm{opacity:0;transform:translateY(-12px) scale(.85)}
+.sr .step:not(.in) .card[open] > .facts{opacity:0;transform:translateY(-6px)}
+.sr .step.in .card{transition:opacity .3s var(--ease) .1s,transform .3s var(--ease) .1s}
+.sr .step.in .node{transition:background-color .35s var(--ease) .3s,color .35s var(--ease) .3s,transform .35s var(--ease) .3s}
+.sr .step.in .tw,.sr .step.in .gw{transition:opacity .3s var(--ease) var(--d,0s),transform .3s var(--ease) var(--d,0s)}
+.sr .step.in .here,.sr .step.in .chev{transition:opacity .3s var(--ease) .5s}
+.sr .step.in .tm{transition:opacity .3s var(--ease),transform .3s var(--ease);transition-delay:calc(.75s + var(--ci,0) * 40ms)}
+.sr .step.in .card[open] > .facts{transition:opacity .3s var(--ease) .85s,transform .3s var(--ease) .85s}
+.sr .step.now,.sr .step.now *,.sr .step.now::after{transition:none!important}
+.motion:not(.sr) .step.is-current .node::after,.motion.sr .step.is-current.in .node::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--accent);opacity:0;pointer-events:none;animation:pulse 1.6s var(--ease) 1.2s 4}
+.motion:not(.sr) .step.is-current .node::after{animation-delay:2.6s}
+@keyframes pulse{from{opacity:.7;transform:scale(1)}to{opacity:0;transform:scale(1.9)}}
+@media (prefers-reduced-motion:reduce){.opening{display:none}.motion *{animation:none!important}}
+.expand-all .opening{display:none}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="you" viewBox="0 0 16 16"><circle cx="8" cy="5" r="3" fill="currentColor"/><path d="M2.5 14.5c.6-3 2.8-4.6 5.5-4.6s4.9 1.6 5.5 4.6" fill="currentColor"/></symbol>
+  <symbol id="t-care" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.6-2.2 2.5-5 2.5"/></g></symbol><symbol id="t-research" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="M15.5 15.5 20.5 20.5"/></g></symbol><symbol id="t-bizdev" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l5-5 4 3 7-7"/><path d="M14 8h6v6"/></g></symbol><symbol id="t-strategy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></g></symbol><symbol id="t-identity" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 9-8 9-8-9z"/><circle cx="12" cy="12" r="2.2"/></g></symbol><symbol id="t-writing" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1L19 8l-3-3L5 16z"/><path d="M14 7l3 3"/></g></symbol><symbol id="t-design" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="10" height="10" rx="1.5"/><circle cx="15" cy="15" r="6"/></g></symbol><symbol id="t-sales" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="7.5" r="1.5"/></g></symbol><symbol id="t-analytics" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20v-7M11 20V5M17 20V10M3 20h18"/></g></symbol><symbol id="t-social" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></g></symbol><symbol id="t-ads" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4h4l8 5V5l-8 5z"/><path d="M18 9a4 4 0 0 1 0 6"/></g></symbol><symbol id="t-video" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3z"/></g></symbol>
+</svg>
+
+<main class="plan" dir="rtl" lang="ar" data-current="1">
+
+  <header class="head">
+    <div class="brandline" aria-hidden="true"></div>
+    <h1>خطة عمل ليث</h1>
+    <p class="sub">10 خطوات من الصفر لأول عملاء بربح</p>
+    <div class="intro">
+      <p class="hi">أهلين ليث،</p>
+      <p>هاي الخطة اللي رح نمشي عليها مع بعض. كل خطوة إلها هدف واضح، وفريق مختص بيشتغل عليها، ونتيجة بتستلمها بإيدك. أي معلومة منحتاجها منك، يارا بتسألك عنها مباشرة.</p>
+    </div>
+  </header>
+
+  <section class="progress" aria-label="وين وصلنا">
+    <div class="pg-top"><span class="pg-k">هون نحنا</span><span class="pg-v">الخطوة <b class="pg-n">1</b> من 10</span></div>
+    <div class="pg-bar"><a class="seg is-current" href="#step-1" aria-label="الخطوة 1"></a><a class="seg" href="#step-2" aria-label="الخطوة 2"></a><a class="seg" href="#step-3" aria-label="الخطوة 3"></a><a class="seg" href="#step-4" aria-label="الخطوة 4"></a><a class="seg" href="#step-5" aria-label="الخطوة 5"></a><a class="seg" href="#step-6" aria-label="الخطوة 6"></a><a class="seg" href="#step-7" aria-label="الخطوة 7"></a><a class="seg" href="#step-8" aria-label="الخطوة 8"></a><a class="seg" href="#step-9" aria-label="الخطوة 9"></a><a class="seg" href="#step-10" aria-label="الخطوة 10"></a></div>
+  </section>
+  <p class="hint"><svg aria-hidden="true" viewBox="0 0 16 16"><path d="M6.5 8V3.2a1.2 1.2 0 0 1 2.4 0V7l3 .6c.8.2 1.3.9 1.2 1.7l-.5 3.4c-.1.7-.7 1.3-1.5 1.3H7.6c-.5 0-.9-.2-1.2-.6L3.6 10a1.1 1.1 0 0 1 1.6-1.5L6.5 9.6" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>انقر على أي خطوة لتشوف تفاصيلها</p>
+  <nav class="map" aria-label="المراحل">
+    <div class="ph"><a class="pn" href="#phase-1">نفهم</a><span class="dots"><a class="d you" href="#step-1" aria-label="الخطوة 1">1</a><a class="d" href="#step-2" aria-label="الخطوة 2">2</a></span></div>
+    <div class="ph"><a class="pn" href="#phase-2">نبني العرض</a><span class="dots"><a class="d" href="#step-3" aria-label="الخطوة 3">3</a><a class="d" href="#step-4" aria-label="الخطوة 4">4</a><a class="d you" href="#step-5" aria-label="الخطوة 5">5</a></span></div>
+    <div class="ph"><a class="pn" href="#phase-3">نجهّز</a><span class="dots"><a class="d you" href="#step-6" aria-label="الخطوة 6">6</a><a class="d" href="#step-7" aria-label="الخطوة 7">7</a><a class="d you" href="#step-8" aria-label="الخطوة 8">8</a></span></div>
+    <div class="ph"><a class="pn" href="#phase-4">نطلق ونقيس</a><span class="dots"><a class="d you" href="#step-9" aria-label="الخطوة 9">9</a><a class="d" href="#step-10" aria-label="الخطوة 10">10</a></span></div>
+  </nav>
+  <p class="legend"><span class="d" aria-hidden="true"></span>الخطوات المعبّاة: بنحتاج فيها شي منك</p>
+
+  <!-- Phase 1 -->
+  <section class="phase">
+    <div class="phase-head" id="phase-1"><span class="k">المرحلة الأولى:</span><h2>نفهم</h2></div>
+    <ol class="steps">
+      <li class="step is-current" id="step-1" data-step="1">
+        <div class="node">1<span class="you" aria-hidden="true"></span></div>
+        <details class="card" open>
+          <summary>
+            <span class="sumtop"><h3 class="title">استمارة البداية</h3><span class="here">هون نحنا</span><svg class="chev" aria-hidden="true" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <p class="goal"><span class="gk">الهدف:</span> نعرفك منيح قبل ما نبلش.</p>
+            <span class="team"><span class="tm" style="--ci:0"><svg aria-hidden="true"><use href="#t-care"/></svg>فريق خدمة العملاء</span></span>
+          </summary>
+          <dl class="facts">
+            <div class="fact"><dt>مين بيشتغل عليها:</dt><dd>فريق خدمة العملاء، ويارا بتبعتلك الاستمارة.</dd></div>
+            <div class="fact ask"><dt><svg aria-hidden="true"><use href="#you"/></svg>شو بنحتاج منك:</dt><dd>تعبّي الاستمارة. فيها شهاداتك، وساعاتك المتاحة بالأسبوع، ووين بتدرّب، ومين بيرد على العملاء، وصلاحيات الإنستغرام وحساب الإعلانات، وأي علاقات عندك مع جيمات أو شركات أو أخصائيين، وأي صور أو فيديوهات عندك.</dd><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeeXIkUeRSDV0zbPTF0_Hdvy3Ee1z_dMvi29aL4il0tvPOcGw/viewform" target="_blank" rel="noopener">عبّي الاستمارة<svg aria-hidden="true" viewBox="0 0 16 16"><path d="M10.5 5.5 5 11M6 5h4.5v4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+            <div class="fact get"><dt>شو بتستلم:</dt><dd>ملف كامل عنك، وكل خطوة جاية بتنبني عليه.</dd></div>
+          </dl>
+        </details>
+      </li>
+      <li class="step" id="step-2" data-step="2">
+        <div class="node">2</div>
+        <details class="card">
+          <summary>
+            <span class="sumtop"><h3 class="title">تحليل حسابك والسوق والمنافسين</h3><span class="here">هون نحنا</span><svg class="chev" aria-hidden="true" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <p class="goal"><span class="gk">الهدف:</span> نعرف وين واقف اليوم، ومين حواليك بالسوق.</p>
+            <span class="team"><span class="tm" style="--ci:0"><svg aria-hidden="true"><use href="#t-research"/></svg>فريق الأبحاث والسوق</span><span class="tm" style="--ci:1"><svg aria-hidden="true"><use href="#t-bizdev"/></svg>فريق تطوير الأعمال</span></span>
+          </summary>
+          <dl class="facts">
+            <div class="fact"><dt>مين بيشتغل عليها:</dt><dd>فريق الأبحاث والسوق، مع فريق تطوير الأعمال.</dd></div>
+            <div class="fact"><dt>شو بنحتاج:</dt><dd>صلاحية حسابك على الإنستغرام، من الخطوة 1.</dd></div>
+            <div class="fact get"><dt>شو بتستلم:</dt><dd>تقرير قصير فيه أهم المنافسين بدبي، والأسعار الحقيقية بالسوق بعد ما نتأكد منها، ونقاط القوة والضعف بحسابك، وقائمة أولية بشركاء ممكن يحيلولك عملاء: جيمات بتقدر تدرّب فيها، وشركات عندها برامج صحة لموظفيها، وأبراج سكنية فيها جيمات، وأخصائيين علاج طبيعي وتغذية.</dd></div>
+          </dl>
+        </details>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Phase 2 -->
+  <section class="phase">
+    <div class="phase-head" id="phase-2"><span class="k">المرحلة الثانية:</span><h2>نبني العرض</h2></div>
+    <ol class="steps">
+      <li class="step" id="step-3" data-step="3">
+        <div class="node">3</div>
+        <details class="card">
+          <summary>
+            <span class="sumtop"><h3 class="title">لمين منبيع، وشو بيميّزك</h3><span class="here">هون نحنا</span><svg class="chev" aria-hidden="true" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <p class="goal"><span class="gk">الهدف:</span> نختار لمين منبيع، وليش يختاروا ليث.</p>
+            <span class="team"><span class="tm" style="--ci:0"><svg aria-hidden="true"><use href="#t-strategy"/></svg>فريق الاستراتيجية</span></span>
+          </summary>
+          <dl class="facts">
+            <div class="fact"><dt>مين بيشتغل عليها:</dt><dd>فريق الاستراتيجية.</dd></div>
+            <div class="fact"><dt>شو بنحتاج:</dt><dd>نتائج الخطوتين 1 و2.</dd></div>
+            <div class="fact get"><dt>شو بتستلم:</dt><dd>الشريحة اللي رح نركّز عليها، وجملة وحدة بتلخّص ليش أنت الخيار الصح إلها. ومستر طه بيعتمدها.</dd></div>
+          </dl>
+        </details>
+      </li>
+      <li class="step" id="step-4" data-step="4">
+        <div class="node">4</div>
+        <details class="card">
+          <summary>
+            <span class="sumtop"><h3 class="title">هوية ليث</h3><span class="here">هون نحنا</span><svg class="chev" aria-hidden="true" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <p class="goal"><span class="gk">الهدف:</span> كيف بيشوفك الناس وكيف بتحكي معهم، بنفس الشكل بكل مكان.</p>
+            <span class="team"><span class="tm" style="--ci:0"><svg aria-hidden="true"><use href="#t-identity"/></svg>فريق الهوية</span><span class="tm" style="--ci:1"><svg aria-hidden="true"><use href="#t-writing"/></svg>فريق الكتابة</span><span class="tm" style="--ci:2"><svg aria-hidden="true"><use href="#t-design"/></svg>فريق التصميم</span></span>
+          </summary>
+          <dl class="facts">
+            <div class="fact"><dt>مين بيشتغل عليها:</dt><dd>فريق الهوية، مع فريق الكتابة وفريق التصميم.</dd></div>
+            <div class="fact"><dt>شو بنحتاج:</dt><dd>نتيجة الخطوة 3.</dd></div>
+            <div class="fact get"><dt>شو بتستلم:</dt><dd>دليل هوية مختصر فيه نبرة الكلام والألوان والخطوط وطريقة الاستخدام، وكل محتواك بيمشي عليه.</dd></div>
+          </dl>
+        </details>
+      </li>
+      <li class="step" id="step-5" data-step="5">
+        <div class="node">5<span class="you" aria-hidden="true"></span></div>
+        <details class="card">
+          <summary>
+            <span class="sumtop"><h3 class="title">الباقات والأسعار</h3><span class="here">هون نحنا</span><svg class="chev" aria-hidden="true" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <p class="goal"><span class="gk">الهدف:</span> عرض بيغطي مصاريفك بأقل عدد عملاء، وكل عميل بعدها ربح.</p>
+            <span class="team"><span class="tm" style="--ci:0"><svg aria-hidden="true"><use href="#t-strategy"/></svg>فريق الاستراتيجية</span><span class="tm" style="--ci:1"><svg aria-hidden="true"><use href="#t-sales"/></svg>فريق المبيعات</span><span class="tm" style="--ci:2"><svg aria-hidden="true"><use href="#t-analytics"/></svg>فريق التحليل</span><span class="tm" style="--ci:3"><svg aria-hidden="true"><use href="#t-bizdev"/></svg>فريق تطوير الأعمال</span></span>
+          </summary>
+          <dl class="facts">
+            <div class="fact"><dt>مين بيشتغل عليها:</dt><dd>فريق الاستراتيجية، مع فريق المبيعات وفريق التحليل وفريق تطوير الأعمال.</dd></div>
+            <div class="fact ask"><dt><svg aria-hidden="true"><use href="#you"/></svg>شو بنحتاج منك:</dt><dd>ساعاتك المتاحة وتكاليفك الفعلية، يارا بتسألك عنها.</dd></div>
+            <div class="fact get"><dt>شو بتستلم:</dt><dd>باقات وأسعار واضحة، وكم عميل بتحتاج لتغطي 1500 دولار بالشهر (حوالي 5,510 درهم)، وكم ممكن تربح ضمن وقتك، وشروط الشراكة وعمولة الإحالة. منعتمدها معك قبل ما نكمّل.</dd></div>
+          </dl>
+        </details>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Phase 3 -->
+  <section class="phase">
+    <div class="phase-head" id="phase-3"><span class="k">المرحلة الثالثة:</span><h2>نجهّز</h2></div>
+    <ol class="steps">
+      <li class="step" id="step-6" data-step="6">
+        <div class="node">6<span class="you" aria-hidden="true"></span></div>
+        <details class="card">
+          <summary>
+            <span class="sumtop"><h3 class="title">طريق العميل من الاهتمام للحجز</h3><span class="here">هون نحنا</span><svg class="chev" aria-hidden="true" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <p class="goal"><span class="gk">الهدف:</span> كل شخص مهتم يوصل لحجز بسهولة، بدون ما يضيع بالطريق.</p>
+            <span class="team"><span class="tm" style="--ci:0"><svg aria-hidden="true"><use href="#t-sales"/></svg>فريق المبيعات</span><span class="tm" style="--ci:1"><svg aria-hidden="true"><use href="#t-writing"/></svg>فريق الكتابة</span><span class="tm" style="--ci:2"><svg aria-hidden="true"><use href="#t-social"/></svg>فريق السوشال ميديا</span><span class="tm" style="--ci:3"><svg aria-hidden="true"><use href="#t-bizdev"/></svg>فريق تطوير الأعمال</span></span>
+          </summary>
+          <dl class="facts">
+            <div class="fact"><dt>مين بيشتغل عليها:</dt><dd>فريق المبيعات، مع فريق الكتابة وفريق السوشال ميديا وفريق تطوير الأعمال.</dd></div>
+            <div class="fact ask"><dt><svg aria-hidden="true"><use href="#you"/></svg>شو بنحتاج منك:</dt><dd>مين بيرد على العملاء، وبأي سرعة.</dd></div>
+            <div class="fact get"><dt>شو بتستلم:</dt><dd>صفحة أو فورم حجز جاهز ومجرّب، وطريق واضح يوصّل المهتمين من الإنستغرام ومن الشركاء للواتساب، ورسائل واتساب جاهزة للرد على الأسئلة والتردد.</dd></div>
+          </dl>
+        </details>
+      </li>
+      <li class="step" id="step-7" data-step="7">
+        <div class="node">7</div>
+        <details class="card">
+          <summary>
+            <span class="sumtop"><h3 class="title">نظام القياس</h3><span class="here">هون نحنا</span><svg class="chev" aria-hidden="true" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <p class="goal"><span class="gk">الهدف:</span> نعرف وين راح كل دولار، وشو رجّع.</p>
+            <span class="team"><span class="tm" style="--ci:0"><svg aria-hidden="true"><use href="#t-analytics"/></svg>فريق التحليل</span><span class="tm" style="--ci:1"><svg aria-hidden="true"><use href="#t-ads"/></svg>فريق الإعلانات</span></span>
+          </summary>
+          <dl class="facts">
+            <div class="fact"><dt>مين بيشتغل عليها:</dt><dd>فريق التحليل، مع فريق الإعلانات.</dd></div>
+            <div class="fact"><dt>شو بنحتاج:</dt><dd>طريق الحجز من الخطوة 6.</dd></div>
+            <div class="fact get"><dt>شو بتستلم:</dt><dd>نظام بيتتبع كل عميل من أول ضغطة أو إحالة لحد الدفع، ومجرّب قبل أي إعلان.</dd></div>
+          </dl>
+        </details>
+      </li>
+      <li class="step" id="step-8" data-step="8">
+        <div class="node">8<span class="you" aria-hidden="true"></span></div>
+        <details class="card">
+          <summary>
+            <span class="sumtop"><h3 class="title">المحتوى والإعلانات</h3><span class="here">هون نحنا</span><svg class="chev" aria-hidden="true" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <p class="goal"><span class="gk">الهدف:</span> محتوى وإعلانات بتوصّل ليش أنت، وشو عرضك، بشكل بيوقف الناس.</p>
+            <span class="team"><span class="tm" style="--ci:0"><svg aria-hidden="true"><use href="#t-writing"/></svg>فريق الكتابة</span><span class="tm" style="--ci:1"><svg aria-hidden="true"><use href="#t-design"/></svg>فريق التصميم</span><span class="tm" style="--ci:2"><svg aria-hidden="true"><use href="#t-video"/></svg>فريق الفيديو</span><span class="tm" style="--ci:3"><svg aria-hidden="true"><use href="#t-social"/></svg>فريق السوشال ميديا</span></span>
+          </summary>
+          <dl class="facts">
+            <div class="fact"><dt>مين بيشتغل عليها:</dt><dd>فريق الكتابة، وفريق التصميم، وفريق الفيديو، وفريق السوشال ميديا بينشر على حسابك.</dd></div>
+            <div class="fact ask"><dt><svg aria-hidden="true"><use href="#you"/></svg>شو بنحتاج منك:</dt><dd>صور وفيديوهات خام إلك وأنت عم تدرّب، والرد على التعليقات والرسائل على الإنستغرام بيضل منك.</dd></div>
+            <div class="fact get"><dt>شو بتستلم:</dt><dd>مجموعة إعلانات جاهزة ومعتمدة ومطابقة لشروط إعلانات ميتا، ومنشورات بتنزل على حسابك بالإنستغرام.</dd></div>
+          </dl>
+        </details>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Phase 4 -->
+  <section class="phase">
+    <div class="phase-head" id="phase-4"><span class="k">المرحلة الرابعة:</span><h2>نطلق ونقيس</h2></div>
+    <ol class="steps">
+      <li class="step" id="step-9" data-step="9">
+        <div class="node">9<span class="you" aria-hidden="true"></span></div>
+        <details class="card">
+          <summary>
+            <span class="sumtop"><h3 class="title">تجربة الإعلانات بـ1000 دولار، والتواصل مع الشركاء</h3><span class="here">هون نحنا</span><svg class="chev" aria-hidden="true" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <p class="goal"><span class="gk">الهدف:</span> نثبت بالأرقام إذا الإعلانات والشراكات بتجيبلك عملاء بربح.</p>
+            <span class="team"><span class="tm" style="--ci:0"><svg aria-hidden="true"><use href="#t-ads"/></svg>فريق الإعلانات</span><span class="tm" style="--ci:1"><svg aria-hidden="true"><use href="#t-analytics"/></svg>فريق التحليل</span><span class="tm" style="--ci:2"><svg aria-hidden="true"><use href="#t-bizdev"/></svg>فريق تطوير الأعمال</span></span>
+          </summary>
+          <dl class="facts">
+            <div class="fact"><dt>مين بيشتغل عليها:</dt><dd>فريق الإعلانات، مع فريق التحليل، وفريق تطوير الأعمال بيتواصل مع الشركاء بنفس الوقت.</dd></div>
+            <div class="fact ask"><dt><svg aria-hidden="true"><use href="#you"/></svg>شو بنحتاج منك:</dt><dd>موافقتك على الميزانية، وعلى قائمة الشركاء قبل ما نتواصل معهم.</dd></div>
+            <div class="fact get"><dt>شو بتستلم:</dt><dd>قبل ما ينصرف ولا دولار، بتعرف شو بيعتبر نجاح، ومتى منوقف، وشو سقف الصرف والمدة. وبعدها بتستلم قائمة بالشركاء اللي تواصلنا معهم وشو كان ردهم.</dd></div>
+          </dl>
+        </details>
+      </li>
+      <li class="step" id="step-10" data-step="10">
+        <div class="node">10</div>
+        <details class="card">
+          <summary>
+            <span class="sumtop"><h3 class="title">النتيجة والقرار</h3><span class="here">هون نحنا</span><svg class="chev" aria-hidden="true" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <p class="goal"><span class="gk">الهدف:</span> نشوف كم كلّفنا كل عميل وكم ربحت، ونقرر الخطوة الجاية.</p>
+            <span class="team"><span class="tm" style="--ci:0"><svg aria-hidden="true"><use href="#t-analytics"/></svg>فريق التحليل</span></span>
+          </summary>
+          <dl class="facts">
+            <div class="fact"><dt>مين بيشتغل عليها:</dt><dd>فريق التحليل، والقرار عند مستر طه.</dd></div>
+            <div class="fact"><dt>شو بنحتاج:</dt><dd>نتائج الخطوة 9 من الإعلانات والشركاء، ونتائج المنشورات من الخطوة 8.</dd></div>
+            <div class="fact get"><dt>شو بتستلم:</dt><dd>تقرير واضح فيه كم كلّف كل عميل، وصافي الربح، وشو جابت المنشورات، وكم عميل إجا من الشركاء مقارنة بالإعلانات، والقرار: منكبّر، أو منعدّل، أو منوقف.</dd></div>
+          </dl>
+        </details>
+      </li>
+    </ol>
+  </section>
+
+  <footer class="close">
+    <p>ما في دولار بينصرف قبل ما نعرف كيف رح نقيسه، وكل قرار مبني على أرقامك إنت. مستر طه بيتابع كل خطوة، ويارا معك على طول لأي سؤال.</p>
+  </footer>
+
+</main>
+
+<script>
+(function(){
+  var plan=document.querySelector('.plan');
+  var steps=[].slice.call(document.querySelectorAll('.step'));
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var still=reduce||plan.classList.contains('expand-all');
+  /* To move the plan forward, change data-current on <main class="plan">. */
+  var cur=parseInt(plan.getAttribute('data-current'),10)||1;
+  steps.forEach(function(li){
+    var n=parseInt(li.getAttribute('data-step'),10);
+    li.classList.toggle('is-current',n===cur);
+    li.classList.toggle('is-done',n<cur);
+    if(n===cur){li.querySelector('details').open=true;}
+  });
+  [].forEach.call(document.querySelectorAll('.seg'),function(a,i){
+    a.classList.toggle('is-current',i+1===cur);
+    a.classList.toggle('is-done',i+1<cur);
+  });
+  var pn=document.querySelector('.pg-n'); if(pn){pn.textContent=cur;}
+
+  /* Opening (under 3s, no skip). */
+  var overlay=null, timers=[], io=null, endIo=null;
+  if(!still){
+    var ids=["care", "research", "bizdev", "strategy", "identity", "writing", "design", "sales", "analytics", "social", "ads", "video"];
+    var html='<div class="in-inner"><p class="in-name">ليث</p><p class="in-k">خطة الشغل</p><div class="in-icons">';
+    ids.forEach(function(id,k){
+      var a=Math.random()*Math.PI*2, r=160+Math.random()*140;
+      html+='<span class="ic" style="--d:'+k+';--x:'+Math.round(Math.cos(a)*r)+'px;--y:'+Math.round(Math.sin(a)*r)+'px;--r:'+Math.round(Math.random()*120-60)+'deg"><svg><use href="#t-'+id+'"/></svg></span>';
+    });
+    html+='</div></div>';
+    overlay=document.createElement('div');
+    overlay.className='opening'; overlay.setAttribute('aria-hidden','true'); overlay.innerHTML=html;
+    plan.appendChild(overlay);
+    plan.classList.add('motion');
+    timers.push(setTimeout(function(){if(overlay&&overlay.parentNode){overlay.parentNode.removeChild(overlay);}},2600));
+  }
+
+  /* Scroll writing: each step is written when it reaches mid-screen. Runs once; never replays. */
+  function wrap(el,cls,step){
+    if(!el)return;
+    var k=0;
+    [].slice.call(el.childNodes).forEach(function(node){
+      if(node.nodeType===1){node.classList.add(cls);node.style.setProperty('--d',(step?(.4+k*step):0)+'s');k++;return;}
+      if(node.nodeType!==3)return;
+      var frag=document.createDocumentFragment();
+      node.textContent.split(/(\s+)/).forEach(function(part){
+        if(!part)return;
+        if(/^\s+$/.test(part)){frag.appendChild(document.createTextNode(part));return;}
+        var sp=document.createElement('span');sp.className=cls;sp.textContent=part;
+        if(step){sp.style.setProperty('--d',(.4+k*step).toFixed(3)+'s');}
+        k++;frag.appendChild(sp);
+      });
+      el.replaceChild(frag,node);
+    });
+  }
+  function lineDelays(li){
+    var ws=[].slice.call(li.querySelectorAll('.gw'));
+    var tops=ws.map(function(w){return w.offsetTop;});
+    var uniq=tops.filter(function(t,i){return tops.indexOf(t)===i;}).sort(function(a,b){return a-b;});
+    ws.forEach(function(w,i){w.style.setProperty('--d',(.55+Math.min(uniq.indexOf(tops[i]),3)*.08).toFixed(2)+'s');});
+  }
+  function reveal(li,instant){
+    if(li.classList.contains('in'))return;
+    var prev=li.previousElementSibling;
+    if(instant){li.classList.add('now');if(prev){prev.classList.add('now');}}
+    else{lineDelays(li);}
+    if(prev){prev.classList.add('fill');}
+    li.classList.add('in');
+  }
+  function revealUpTo(li,instant){
+    var idx=steps.indexOf(li);
+    for(var i=0;i<idx;i++){reveal(steps[i],true);}
+    reveal(li,instant);
+  }
+  function revealAll(){steps.forEach(function(li){reveal(li,true);});}
+  var vel=0,lastY=window.scrollY,lastT=Date.now();
+  if(!still&&'IntersectionObserver' in window){
+    plan.classList.add('sr');
+    steps.forEach(function(li){
+      wrap(li.querySelector('.title'),'tw',.045);
+      wrap(li.querySelector('.goal'),'gw',0);
+    });
+    window.addEventListener('scroll',function(){
+      var t=Date.now(),y=window.scrollY;
+      vel=Math.abs(y-lastY)/Math.max(1,t-lastT);lastY=y;lastT=t;
+    },{passive:true});
+    /* Observe from load; while the opening plays, remember what is already in view and write it when the opening ends. */
+    var ready=!overlay, pending=[];
+    io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        var li=e.target, past=e.boundingClientRect.bottom<0;
+        if(!ready){
+          var k=pending.indexOf(li);
+          if(e.isIntersecting||past){if(k<0){pending.push(li);}}else if(k>=0){pending.splice(k,1);}
+          return;
+        }
+        if(e.isIntersecting||past){revealUpTo(li,past||vel>2.5);io.unobserve(li);}
+      });
+    },{rootMargin:'0px 0px -50% 0px'});
+    steps.forEach(function(li){io.observe(li);});
+    if(!ready){timers.push(setTimeout(function(){
+      ready=true;
+      pending.sort(function(a,b){return steps.indexOf(a)-steps.indexOf(b);}).forEach(function(li){revealUpTo(li,false);io.unobserve(li);});
+    },1900));}
+    /* The last steps may never reach mid-screen on a tall screen: write them when the closing note shows. */
+    var close=document.querySelector('.close');
+    if(close){
+      endIo=new IntersectionObserver(function(entries){
+        if(entries[0].isIntersecting&&ready){steps.forEach(function(li){if(!li.classList.contains('in')){reveal(li,vel>2.5);}});endIo.disconnect();}
+      });
+      endIo.observe(close);
+    }
+  }
+
+  function stopMotion(){
+    timers.forEach(clearTimeout);
+    if(io){io.disconnect();} if(endIo){endIo.disconnect();}
+    if(overlay&&overlay.parentNode){overlay.parentNode.removeChild(overlay);}
+    revealAll();
+    plan.classList.remove('motion','sr');
+  }
+
+  /* Smooth open: details fade and slide in when a card is opened. */
+  [].forEach.call(document.querySelectorAll('details.card'),function(d){
+    d.addEventListener('toggle',function(){
+      if(!d.open||!plan.classList.contains('motion')||!d.animate)return;
+      var li=d.closest('.step'); if(plan.classList.contains('sr')&&li&&!li.classList.contains('in'))return;
+      var f=d.querySelector('.facts');
+      if(f){f.animate([{opacity:0,transform:'translateY(-8px)'},{opacity:1,transform:'none'}],{duration:340,easing:'cubic-bezier(.16,1,.3,1)'});}
+    });
+  });
+
+  function openStep(id,scroll){
+    var li=id&&document.getElementById(id);
+    if(!li||!li.classList.contains('step'))return;
+    if(plan.classList.contains('sr')){revealUpTo(li,true);}
+    li.querySelector('details').open=true;
+    if(scroll){li.scrollIntoView({block:'start',behavior:reduce?'auto':'smooth'});}
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href^="#step-"]');
+    if(a){openStep(a.getAttribute('href').slice(1),false);}
+  });
+  window.addEventListener('hashchange',function(){openStep(location.hash.slice(1),true);});
+  if(location.hash){openStep(location.hash.slice(1),true);}
+  /* For PDF export: call expandAll(), or add class "expand-all" to <main>. Both stop all motion and show everything. */
+  window.expandAll=function(){stopMotion();plan.classList.add('expand-all');[].forEach.call(document.querySelectorAll('details.card'),function(d){d.open=true;});};
+  if(plan.classList.contains('expand-all')){window.expandAll();}
+  window.addEventListener('beforeprint',window.expandAll);
+})();
+</script>
+
+</body>
+</html>
